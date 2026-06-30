@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login - FotoEstudio</title>
+    <title>Login</title>
 </head>
 <body>
 
