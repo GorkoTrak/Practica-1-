@@ -9,7 +9,7 @@
     
     <h2>Formulario de prueba</h2>
 
-    <form action="recibir.php" method="POST">
+    <form action="../ejemplos/recibir.php" method="POST">
 
         <label>Nombre</label><br>
 

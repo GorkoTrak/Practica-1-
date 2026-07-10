@@ -1,6 +1,6 @@
 <?php
 
-include "config/conexion.php";
+include "../config/conexion.php";
 
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];

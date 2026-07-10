@@ -4,7 +4,7 @@ session_start();
 
 if(!isset($_SESSION["usuario"]))
 {
-    header("Location: login.php");
+    header("Location: auth/login.php");
     exit();
 }
 
@@ -24,11 +24,11 @@ if(!isset($_SESSION["usuario"]))
 
 <p>Hola <?php echo $_SESSION["usuario"]; ?></p>
 
-<a href="usuarios.php">Ver usuarios</a>
+<a href="usuarios/usuarios.php">Ver usuarios</a>
 
 <br><br>
 
-<a href="logout.php">Cerrar sesión</a>
+<a href="auth/logout.php">Cerrar sesión</a>
 
 </body>
 </html>

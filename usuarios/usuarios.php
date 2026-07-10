@@ -1,6 +1,6 @@
 <?php
 
-include "config/conexion.php";
+include "../config/conexion.php";
 
 $sql = "SELECT * FROM usuarios";
 
@@ -41,6 +41,10 @@ $resultado = $conexion->query($sql);
 
     <td>
         <a href="editar.php?id=<?php echo $fila["id"]; ?>">Editar</a>
+        
+        |
+
+        <a href="eliminar.php?id=<?php echo $fila["id"]; ?>">Eliminar</a>
     </td>
 
 </tr>
@@ -51,3 +55,8 @@ $resultado = $conexion->query($sql);
 
 </body>
 </html>
+<?php
+
+include "../includes/footer.php";
+
+?>

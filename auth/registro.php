@@ -10,7 +10,7 @@
 
 <h2>Registro de usuario</h2>
 
-<form action="guardar_usuario.php" method="POST">
+<form action="../usuarios/guardar_usuario.php" method="POST">
 
     <label>Nombre</label><br>
     <input type="text" name="nombre" required><br><br>

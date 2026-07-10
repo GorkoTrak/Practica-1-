@@ -2,7 +2,7 @@
 
 session_start();
 
-include "config/conexion.php";
+include "../config/conexion.php";
 
 $correo = $_POST["correo"];
 $password = $_POST["password"];
@@ -19,7 +19,7 @@ if($resultado->num_rows == 1)
     {
         $_SESSION["usuario"] = $fila["nombre"];
 
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     }
     else
