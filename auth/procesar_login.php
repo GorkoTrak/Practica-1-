@@ -18,7 +18,7 @@ if($resultado->num_rows == 1)
     if(password_verify($password,$fila["password"]))
     {
         $_SESSION["usuario"] = $fila["nombre"];
-
+        $_SESSION["correo"] = $fila["correo"];
         header("Location: ../index.php");
         exit();
     }

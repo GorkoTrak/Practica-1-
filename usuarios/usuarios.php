@@ -2,6 +2,11 @@
 
 include "../config/conexion.php";
 
+include "../includes/header.php";
+
+include "../includes/menu.php";
+
+
 $sql = "SELECT * FROM usuarios";
 
 $resultado = $conexion->query($sql);

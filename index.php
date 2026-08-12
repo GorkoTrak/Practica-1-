@@ -8,6 +8,8 @@ if(!isset($_SESSION["usuario"]))
     exit();
 }
 
+include "includes/header.php";
+include "includes/menu.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,16 +21,33 @@ if(!isset($_SESSION["usuario"]))
 </head>
 
 <body>
+<div class="container">
 
-<h2>Bienvenido</h2>
+    <div class="card">
 
-<p>Hola <?php echo $_SESSION["usuario"]; ?></p>
+        <div class="card-header">
+            Panel principal
+        </div>
 
-<a href="usuarios/usuarios.php">Ver usuarios</a>
+        <div class="card-body">
 
-<br><br>
+            <h2>Bienvenido</h2>
 
-<a href="auth/logout.php">Cerrar sesión</a>
+            <p>Hola <?php echo $_SESSION["usuario"]; ?></p>
+
+            <p>
+                Correo: <?php echo $_SESSION["correo"]; ?>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
+
+<?php
+include "includes/footer.php";
+?>
