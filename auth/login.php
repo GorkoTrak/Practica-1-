@@ -1,3 +1,6 @@
+<?php
+include "../includes/header.php";
+?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,41 +8,43 @@
     <title>Login</title>
 </head>
 <body>
+<div class="container mt-4">
+    <h2>Iniciar Sesión</h2>
 
-<h2>Iniciar Sesión</h2>
+    <form action="procesar_login.php" method="POST">
 
-<form action="procesar_login.php" method="POST">
+        <label>Correo</label><br>
 
-    <label>Correo</label><br>
+        <input
+            type="email"
+            name="correo"
+            required
+        >
 
-    <input
-        type="email"
-        name="correo"
-        required
-    >
+        <br><br>
 
-    <br><br>
+        <label>Contraseña</label><br>
 
-    <label>Contraseña</label><br>
+        <input
+            type="password"
+            name="password"
+            required
+        >
 
-    <input
-        type="password"
-        name="password"
-        required
-    >
+        <br><br>
 
-    <br><br>
+        <button type="submit">
 
-    <button type="submit">
+            Ingresar
 
-        Ingresar
+        </button>
 
-    </button>
+    </form>
 
-</form>
-
-
+</div>
 </body>
 
 </html>
-
+<?php
+include "../includes/footer.php";
+?> 
