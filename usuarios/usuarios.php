@@ -12,7 +12,9 @@ $sql = "SELECT * FROM usuarios";
 $resultado = $conexion->query($sql);
 
 ?>
-<div class="container mt-4">
+
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -22,15 +24,15 @@ $resultado = $conexion->query($sql);
 <body>
 
 <h2>Usuarios registrados</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Acciones</th>
+</tr>
 
 <?php while($fila = $resultado->fetch_assoc()) { ?>
 
@@ -57,8 +59,7 @@ $resultado = $conexion->query($sql);
 </table>
 
 </body>
-
- </div>
+</html>
 <?php
 
 include "../includes/footer.php";

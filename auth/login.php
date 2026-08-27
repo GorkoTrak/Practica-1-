@@ -1,6 +1,3 @@
-<?php
-include "../includes/header.php";
-?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,43 +5,41 @@ include "../includes/header.php";
     <title>Login</title>
 </head>
 <body>
-<div class="container mt-4">
-    <h2>Iniciar Sesión</h2>
 
-    <form action="procesar_login.php" method="POST">
+<h2>Iniciar Sesión</h2>
 
-        <label>Correo</label><br>
+<form action="procesar_login.php" method="POST">
 
-        <input
-            type="email"
-            name="correo"
-            required
-        >
+    <label>Correo</label><br>
 
-        <br><br>
+    <input
+        type="email"
+        name="correo"
+        required
+    >
 
-        <label>Contraseña</label><br>
+    <br><br>
 
-        <input
-            type="password"
-            name="password"
-            required
-        >
+    <label>Contraseña</label><br>
 
-        <br><br>
+    <input
+        type="password"
+        name="password"
+        required
+    >
 
-        <button type="submit">
+    <br><br>
 
-            Ingresar
+    <button type="submit">
 
-        </button>
+        Ingresar
 
-    </form>
+    </button>
 
-</div>
+</form>
+
+
 </body>
 
 </html>
-<?php
-include "../includes/footer.php";
-?> 
+
