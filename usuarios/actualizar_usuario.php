@@ -2,6 +2,13 @@
 
 include "../config/conexion.php";
 
+//negar entrar si no es administrador
+if(!isset($_SESSION["usuario"]))
+{
+    header("Location: ../auth/login.php");
+    exit();
+}
+
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $correo = $_POST["correo"];

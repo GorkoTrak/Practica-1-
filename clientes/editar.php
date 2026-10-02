@@ -7,7 +7,9 @@ include "../config/conexion.php";
 // Verificar que venga el ID
 if(!isset($_GET["id"]))
 {
-    echo "ID no proporcionado.";
+    $_SESSION["error"] = "ID no proporcionado.";
+
+    header("Location: clientes.php");
     exit();
 }
 
@@ -16,7 +18,9 @@ $id = $_GET["id"];
 // Verificar que sea numérico
 if(!is_numeric($id))
 {
-    echo "ID no válido.";
+    $_SESSION["error"] = "ID no válido.";
+
+    header("Location: clientes.php");
     exit();
 }
 
@@ -38,7 +42,9 @@ if($resultado->num_rows == 1)
 }
 else
 {
-    echo "Cliente no encontrado.";
+    $_SESSION["error"] = "Cliente no encontrado.";
+
+    header("Location: clientes.php");
     exit();
 }
 

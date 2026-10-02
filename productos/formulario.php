@@ -2,6 +2,12 @@
 
 session_start();
 
+if(!isset($_SESSION["usuario"]))
+{
+    header("Location: ../auth/login.php");
+    exit();
+}
+
 if(isset($_SESSION["error"]))
 {
     echo '<div class="alert alert-danger">';

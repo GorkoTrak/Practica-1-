@@ -6,6 +6,20 @@ include "../includes/header.php";
 
 include "../includes/menu.php";
 
+//negar entrar si no es administrador
+if(!isset($_SESSION["rol"]) || $_SESSION["rol"] != "administrador")
+{
+    $_SESSION["error"] = "No tienes permiso para acceder.";
+
+    header("Location: ../index.php");
+    exit();
+}
+
+if(!isset($_SESSION["usuario"]))
+{
+    header("Location: ../auth/login.php");
+    exit();
+}
 
 $sql = "SELECT * FROM usuarios";
 
@@ -13,6 +27,10 @@ $resultado = $conexion->query($sql);
 
 ?>
 <div class="container mt-4">
+
+<a href="formulario.php" class="btn btn-success mb-3">
+    Agregar Usuario
+</a>
 
 <head>
     <meta charset="UTF-8">

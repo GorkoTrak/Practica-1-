@@ -9,6 +9,12 @@ include "../includes/header.php";
 
 include "../includes/menu.php";
 
+if(!isset($_SESSION["usuario"]))
+{
+    header("Location: ../auth/login.php");
+    exit();
+}
+
 $sql = "SELECT * FROM productos";
 
 $resultado = $conexion->query($sql);

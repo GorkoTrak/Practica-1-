@@ -4,6 +4,12 @@ session_start();
 
 include "../config/conexion.php";
 
+if(!isset($_SESSION["usuario"]))
+{
+    header("Location: ../auth/login.php");
+    exit();
+}
+
 // Verificar que venga el ID
 if(!isset($_GET["id"]))
 {

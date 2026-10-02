@@ -2,6 +2,14 @@
 
 include "../config/conexion.php";
 
+//negar entrada si iniciar sesion
+if(!isset($_SESSION["usuario"]))
+{
+    header("Location: ../auth/login.php");
+    exit();
+}
+
+
 $id = $_GET["id"];
 
 $sql = "SELECT * FROM usuarios WHERE id='$id'";
